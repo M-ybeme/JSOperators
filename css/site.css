@@ -128,3 +128,9 @@ body{
 .checklist>li i{
     color:var(--mdm-primary-color);
 }
+
+.pResults{
+    font-size: 1rem;
+    color: var(--mdm-primary-color)
+}
+

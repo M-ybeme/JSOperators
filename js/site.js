@@ -20,6 +20,7 @@ function getNumbers(){
         return;
         
     } 
+    //calling Numbers
     let sum = sumNumbers(num1, num2);
 
     let sub = subNumbers(num1, num2);
@@ -33,18 +34,74 @@ function getNumbers(){
     let sumAll = addAllNumbers(num1, num2)
 
     let factorial = factorialNumbers(num1, num2)
+
+    displayResults(sum,sub,product,quotient,r,sumAll,factorial)
     
+
     //add the value in the debug console
-    console.log("sub=" + sub);
-    console.log("sum=" + sum);
-    console.log("prod=" + product);
-    console.log("div=" + quotient);
-    console.log("rem=" + r);
-    console.log("sumAll=" + sumAll);
-    console.log("factorial=" + factorial);
+     console.log("sub=" + sub);
+     console.log("sum=" + sum);
+     console.log("prod=" + product);
+     console.log("div=" + quotient);
+     console.log("rem=" + r);
+     console.log("sumAll=" + sumAll);
+     console.log("factorial=" + factorial);
 
+    //display all the results from our math
 
+    function displayResults(sumResult, subResult, productResult, quotientResult, rResult, sumAllResult, factorialResult) {
+        let results = document.getElementById("results");
+        results.innerHTML= ""
+        //creat p tags 
+        let pTag = document.createElement("p");
+        pTag.classList.add("pResults");
+        pTag.innerHTML = "The sum of the numbers = " + sumResult;
+
+        let pTagSub = document.createElement("p");
+        pTagSub.classList.add("pResults");
+        pTagSub.innerHTML = "The difference between the numbers = " + subResult;
+
+        let pTagQuotient = document.createElement("p");
+        pTagQuotient.classList.add("pResults");
+        pTagQuotient.innerHTML = "The quotient of the numbers = " + quotientResult;
+
+        let pTagProduct = document.createElement("p");
+        pTagProduct.classList.add("pResults");
+        pTagProduct.innerHTML = "The product of the numbers = " + productResult;
+
+        let pTagR = document.createElement("p");
+        pTagR.classList.add("pResults");
+        pTagR.innerHTML = "The remainder of the numbers = " + rResult;
+
+        let pTagSumAll = document.createElement("p");
+        pTagSumAll.classList.add("pResults");
+        pTagSumAll.innerHTML = "The Sum of  all the numbers = " + sumAllResult;
+
+        let pTagFactorial = document.createElement("p");
+        pTagFactorial.classList.add("pResults");
+        pTagFactorial.innerHTML = "The factorial of all the numbers = " + factorialResult;
+
+        results.appendChild(pTag);
+        results.appendChild(pTagSub);
+        results.appendChild(pTagQuotient);
+        results.appendChild(pTagProduct);
+        results.appendChild(pTagR);
+        results.appendChild(pTagSumAll);
+        results.appendChild(pTagFactorial);
+        
     }
+    // add to inner html of the result div
+    // results.appendchild(pTag);
+    // results.appendchild(pTagSub);
+    // results.appendchild(pTagQuotient);
+    // results.appendchild(pTagProduct);
+    // results.appendchild(pTagR);
+    // results.appendchild(pTagSumAll);
+    // results.appendchild(pTagFactorial);
+
+    
+}
+
 
 
     //adds two numbers and returns the result
